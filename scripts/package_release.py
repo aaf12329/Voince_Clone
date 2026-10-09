@@ -17,7 +17,7 @@ def release_files(root=ROOT):
     root = Path(root).resolve()
     files = [root / name for name in ROOT_FILES]
     for pattern in ('src/**/*.py', 'scripts/*.ps1', 'scripts/*.py', 'launchers/*.bat',
-                    'assets/*.ico', 'tests/*.py', '.github/workflows/*.yml'):
+                    'assets/*.ico', 'assets/*.svg', 'assets/*.png', 'tests/*.py', '.github/workflows/*.yml'):
         files.extend(root.glob(pattern))
     for path in files:
         if not path.is_file() or not path.resolve().is_relative_to(root) or '__pycache__' in path.parts:

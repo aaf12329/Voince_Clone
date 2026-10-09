@@ -35,7 +35,7 @@ if (Test-Path -LiteralPath $taskPidFile) {
     }
 }
 if (-not $taskExisting) {
-    $taskProcess = Start-Process -FilePath $env:VOICE_CLONE_PYTHON -ArgumentList @('-u', (Join-Path $taskVoiceRoot 'src\app.py')) -WorkingDirectory $taskVoiceRoot -WindowStyle Hidden -RedirectStandardOutput (Join-Path $taskVoiceRoot 'logs\server.log') -RedirectStandardError (Join-Path $taskVoiceRoot 'logs\server.err.log') -PassThru
+    $taskProcess = Start-Process -FilePath $env:VOICE_CLONE_PYTHON -ArgumentList ('-u "' + (Join-Path $taskVoiceRoot 'src\app.py') + '"') -WorkingDirectory $taskVoiceRoot -WindowStyle Hidden -RedirectStandardOutput (Join-Path $taskVoiceRoot 'logs\server.log') -RedirectStandardError (Join-Path $taskVoiceRoot 'logs\server.err.log') -PassThru
     @{pid=$taskProcess.Id; root=$taskVoiceRoot} | ConvertTo-Json | Set-Content -LiteralPath $taskPidFile -Encoding UTF8
 }
 for ($taskAttempt=0; $taskAttempt -lt 120; $taskAttempt++) {

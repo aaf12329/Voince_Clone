@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1550" viewBox="0 0 1600 1550">
+<title>声音克隆 0.2.0 代码调用结构</title>
+<desc>一键部署、桌面 JSON 通信、后台模型推理与音频保存；实线执行，虚线数据返回。</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#5264e8"/></marker></defs>
+<rect width="1600" height="1550" fill="#f3f5fa"/>
+<text x="60" y="80" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="42" font-weight="700" fill="#24324b">声音克隆 · 代码调用结构</text>
+<text x="60" y="120" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#68768e">Voice Clone 0.2.0    实线：主要执行流程    虚线：数据 / 状态返回</text>
+<text x="60" y="195" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#24324b">01  一键部署</text>
+<rect x="60" y="215" width="235" height="115" rx="18" fill="#edf0ff" stroke="#dce3ef" stroke-width="2"/>
+<text x="82" y="259" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#24324b">快速部署.bat</text>
+<text x="82" y="298" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">中文双击入口</text>
+<rect x="340" y="215" width="335" height="115" rx="18" fill="#edf0ff" stroke="#dce3ef" stroke-width="2"/>
+<text x="362" y="259" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#24324b">One_Click_Start.bat</text>
+<text x="362" y="298" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">uv → 独立 Python</text>
+<rect x="720" y="215" width="325" height="115" rx="18" fill="#edf0ff" stroke="#dce3ef" stroke-width="2"/>
+<text x="742" y="260" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#24324b">setup_app.py</text>
+<text x="742" y="298" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">main()  安装窗口</text>
+<rect x="1090" y="215" width="450" height="115" rx="18" fill="#edf0ff" stroke="#dce3ef" stroke-width="2"/>
+<text x="1112" y="260" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#24324b">deploy.py main()</text>
+<text x="1112" y="298" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">配置 / 硬件 / 部署锁</text>
+<polyline points="295,270 340,270" fill="none" stroke="#5264e8" stroke-width="3" marker-end="url(#arrow)"/>
+<polyline points="675,270 720,270" fill="none" stroke="#5264e8" stroke-width="3" marker-end="url(#arrow)"/>
+<polyline points="1045,270 1090,270" fill="none" stroke="#5264e8" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="60" y="390" width="985" height="125" rx="18" fill="#e8f5ef" stroke="#dce3ef" stroke-width="2"/>
+<text x="82" y="435" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#24324b">Deployer.deploy() / launch()</text>
+<text x="82" y="473" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">Python / venv → 固定依赖 → CUDA 实测 → 模型下载校验</text>
+<text x="82" y="506" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">音频工具 → 短语音验证 → 桌面快捷方式 → 启动 GUI</text>
+<rect x="1090" y="390" width="450" height="125" rx="18" fill="white" stroke="#dce3ef" stroke-width="2"/>
+<text x="1112" y="435" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#24324b">配置输入</text>
+<text x="1112" y="473" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">deploy_config.json / requirements.lock</text>
+<text x="1112" y="506" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">可选 deploy.local.json（不随源码发布）</text>
+<polyline points="1315,330 1315,355 552,355 552,390" fill="none" stroke="#5264e8" stroke-width="3" marker-end="url(#arrow)"/>
+<polyline points="1315,390 1315,330" fill="none" stroke="#5264e8" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="1340" y="367" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#5264e8">读取配置</text>
+<text x="60" y="595" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#24324b">02  桌面界面与后台通信</text>
+<rect x="60" y="620" width="400" height="170" rx="18" fill="#edf0ff" stroke="#dce3ef" stroke-width="2"/>
+<text x="82" y="665" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#24324b">desktop_app.py</text>
+<text x="82" y="703" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">main() → VoiceWindow</text>
+<text x="82" y="736" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">录音 / 文字 / 试听 / 历史</text>
+<text x="82" y="769" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">read_worker() → set_result()</text>
+<rect x="505" y="620" width="420" height="170" rx="18" fill="#edf0ff" stroke="#dce3ef" stroke-width="2"/>
+<text x="527" y="664" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#24324b">VoiceWindow.generate()</text>
+<text x="527" y="703" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">校验输入 / 保存设置</text>
+<text x="527" y="736" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">启动 QProcess 后台</text>
+<text x="527" y="769" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">send_request() 写 UTF-8 JSON</text>
+<rect x="970" y="620" width="570" height="170" rx="18" fill="#edf0ff" stroke="#dce3ef" stroke-width="2"/>
+<text x="992" y="665" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#24324b">desktop_worker.py</text>
+<text x="992" y="703" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">main() 读取 stdin 的 JSON 行</text>
+<text x="992" y="736" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">InferenceEngine.generate(request, event)</text>
+<text x="992" y="769" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">event() 回传 stage / done / error</text>
+<polyline points="552,515 552,595 260,595 260,620" fill="none" stroke="#5264e8" stroke-width="3" marker-end="url(#arrow)"/>
+<polyline points="460,705 505,705" fill="none" stroke="#5264e8" stroke-width="3" marker-end="url(#arrow)"/>
+<polyline points="925,705 970,705" fill="none" stroke="#5264e8" stroke-width="3" marker-end="url(#arrow)"/>
+<polyline points="1255,790 1255,835 260,835 260,790" fill="none" stroke="#5264e8" stroke-width="3" stroke-dasharray="10 8" marker-end="url(#arrow)"/>
+<text x="455" y="822" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#5264e8">VOICE_EVENT → 阶段 / 文件路径 / 用时 / 错误</text>
+<text x="60" y="904" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#68768e">取消 / 关闭 / 空闲计时 → stop_worker() → 停止进程树，释放模型显存</text>
+<text x="60" y="975" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#24324b">03  后台推理与保存</text>
+<rect x="60" y="1005" width="1480" height="370" rx="18" fill="#fff5e4" stroke="#dce3ef" stroke-width="2"/>
+<text x="82" y="1052" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#24324b">voice_clone.inference.InferenceEngine.generate()</text>
+<text x="82" y="1088" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">按需缓存模型；split_text() 分段；复用参考声音提示；拼接全部段落后保存 WAV</text>
+<rect x="90" y="1120" width="420" height="210" rx="18" fill="white" stroke="#dce3ef" stroke-width="2"/>
+<text x="112" y="1165" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#24324b">audio.py</text>
+<text x="112" y="1203" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">reference_info()</text>
+<text x="112" y="1236" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">load_reference()</text>
+<text x="112" y="1269" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">校验 / 解码 / 转为单声道</text>
+<rect x="555" y="1120" width="505" height="210" rx="18" fill="white" stroke="#dce3ef" stroke-width="2"/>
+<text x="577" y="1165" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#24324b">Qwen3TTSModel</text>
+<text x="577" y="1203" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">from_pretrained() 按需加载</text>
+<text x="577" y="1236" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">create_voice_clone_prompt()</text>
+<text x="577" y="1269" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">generate_voice_clone() 逐段生成</text>
+<rect x="1105" y="1120" width="405" height="210" rx="18" fill="white" stroke="#dce3ef" stroke-width="2"/>
+<text x="1127" y="1165" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#24324b">audio.write_result()</text>
+<text x="1127" y="1203" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">验证波形与采样率</text>
+<text x="1127" y="1236" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">临时文件完成后原子替换</text>
+<text x="1127" y="1269" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#68768e">outputs/*.wav</text>
+<polyline points="1255,790 1255,925 800,925 800,1005" fill="none" stroke="#5264e8" stroke-width="3" marker-end="url(#arrow)"/>
+<polyline points="510,1225 555,1225" fill="none" stroke="#5264e8" stroke-width="3" marker-end="url(#arrow)"/>
+<polyline points="1060,1225 1105,1225" fill="none" stroke="#5264e8" stroke-width="3" marker-end="url(#arrow)"/>
+<polyline points="1540,1080 1570,1080 1570,705 1540,705" fill="none" stroke="#5264e8" stroke-width="3" stroke-dasharray="10 8" marker-end="url(#arrow)"/>
+<text x="60" y="1455" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#68768e">辅助服务：project.py（路径 / 原子设置）  ·  diagnostics.py（诊断报告）</text>
+<text x="60" y="1499" text-anchor="start" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#68768e">兼容入口：app.py（Gradio 网页）  ·  scripts / launchers（旧辅助启动）</text>
+</svg>
