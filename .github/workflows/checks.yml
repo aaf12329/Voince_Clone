@@ -1,0 +1,22 @@
+name: source-checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Standard-library deployment and packaging tests
+        run: python -m unittest discover -s tests -p test_deployment.py -v
+      - name: Check Python syntax
+        run: python -m compileall -q deploy.py src scripts tests
+      - name: Build clean source release
+        run: python scripts/package_release.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Voice-Clone-source
+          path: releases/*.zip

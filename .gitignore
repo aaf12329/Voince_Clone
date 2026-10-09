@@ -1,0 +1,25 @@
+# Local installations and generated/user data never belong in a source release.
+.venv/
+.venv.backup-*/
+runtime/
+models/
+tools/bootstrap/
+tools/sox/
+tools/sox-14.4.2-win32.zip
+cache/
+temp/
+logs/
+outputs/
+samples/
+releases/
+deploy.local.json
+__pycache__/
+*.py[cod]
+*.part
+*.zip
+.idea/
+.vscode/
+.ruff_cache/
+.pytest_cache/
+.DS_Store
+desktop.ini

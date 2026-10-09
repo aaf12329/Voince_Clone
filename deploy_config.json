@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "project": "Voice Clone",
+  "python_version": "3.12.15",
+  "cuda_root": "C:\\CUDA\\Voice_Clone",
+  "bootstrap": {
+    "uv_version": "0.12.23",
+    "url": "https://files.pythonhosted.org/packages/af/fd/816f4e8a76197312ec8037369e5b5c8a5ebde7aa118b6250259e031d3444/uv-0.12.23-py3-none-win_amd64.whl",
+    "sha256": "fb8a4117a5224d73abe2204a1e744ae34b544f1b9a0b761576851deaa7215c12",
+    "size": 18138726
+  },
+  "hardware": {
+    "selection": "actual_cuda_and_model_inference",
+    "ram_warning_gib": 16
+  },
+  "download": {
+    "retries": 5,
+    "timeout_seconds": 120,
+    "parallel_model_files": 3
+  },
+  "torch_wheels": [
+    {
+      "filename": "torch-2.9.1+cu128-cp312-cp312-win_amd64.whl",
+      "url": "https://download-r2.pytorch.org/whl/cu128/torch-2.9.1%2Bcu128-cp312-cp312-win_amd64.whl",
+      "sha256": "3a01f0b64c10a82d444d9fd06b3e8c567b1158b76b2764b8f51bfd8f535064b0",
+      "size": 2862033275
+    },
+    {
+      "filename": "torchaudio-2.9.1+cu128-cp312-cp312-win_amd64.whl",
+      "url": "https://download-r2.pytorch.org/whl/cu128/torchaudio-2.9.1%2Bcu128-cp312-cp312-win_amd64.whl",
+      "sha256": "88896c7bfa486102439fab6c85ac834176617e9c06eb0be9074c07ee1183b47d",
+      "size": 2216960
+    }
+  ],
+  "packages": [
+    "qwen-tts==0.1.1",
+    "transformers==4.57.3",
+    "accelerate==1.12.0",
+    "gradio==5.49.1",
+    "PySide6==6.12.0",
+    "soundfile==0.14.0"
+  ],
+  "package_index": "https://pypi.org/simple",
+  "model": {
+    "id": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+    "directory": "models/Qwen3-TTS-12Hz-1.7B-Base",
+    "api": "https://modelscope.cn/api/v1/models/Qwen/Qwen3-TTS-12Hz-1.7B-Base/repo",
+    "files": [
+      {
+        "path": ".gitattributes",
+        "size": 2247,
+        "sha256": "278018b83d294dddd19501978038ee222ecbab611872d8a251ff2d757519a276",
+        "revision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+      },
+      {
+        "path": "README.md",
+        "size": 57817,
+        "sha256": "621b7e88f1867bc03d817176fc1f7f55f4b5a70654b2a07fdcda1e169efb024b",
+        "revision": "dfb4a462f62f8f831ff0ffabf31189fc9d4344fd"
+      },
+      {
+        "path": "config.json",
+        "size": 4494,
+        "sha256": "b4f01752d15a488abde3e1ab44723ae4f4b9e68a4037257b098b3737893cc1f9",
+        "revision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+      },
+      {
+        "path": "configuration.json",
+        "size": 47,
+        "sha256": "c502b6328c67638b401df8dd05de89e9e8d1cff9cd0ada10dfbdbe13556c20de",
+        "revision": "e64d6c63687331a1f82cab75c23c0447f25a64d2"
+      },
+      {
+        "path": "generation_config.json",
+        "size": 245,
+        "sha256": "f1b90b4513f3b34c62851049e2492d7b4c5940daf1276f89c82b8ef04127f3aa",
+        "revision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+      },
+      {
+        "path": "merges.txt",
+        "size": 1671839,
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "revision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+      },
+      {
+        "path": "model.safetensors",
+        "size": 3857413744,
+        "sha256": "38fc7fc51c5e776e840414b6fd443962e9411b9654888fd7913e4da643cb857c",
+        "revision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+      },
+      {
+        "path": "preprocessor_config.json",
+        "size": 127,
+        "sha256": "efdde1022ea9d76928bf7a9cd53139138f5ba2e466e837f08f6105ab1af1c119",
+        "revision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+      },
+      {
+        "path": "speech_tokenizer/config.json",
+        "size": 2336,
+        "sha256": "ee65bb901c876664ab8707c487157aa1a6ee57c65969b28fb5ec9dc211e68167",
+        "revision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+      },
+      {
+        "path": "speech_tokenizer/configuration.json",
+        "size": 76,
+        "sha256": "6bc26d64eb5024b4d1dab5a52371958b429256d6c9d59787f1f5294a54e0cebd",
+        "revision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+      },
+      {
+        "path": "speech_tokenizer/model.safetensors",
+        "size": 682293092,
+        "sha256": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258",
+        "revision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+      },
+      {
+        "path": "speech_tokenizer/preprocessor_config.json",
+        "size": 234,
+        "sha256": "fcb3805e597e786d4067706e602f6688524640f8d3396790e2e09b5942fcbdfb",
+        "revision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 7344,
+        "sha256": "dc3c31c3bdaedd5016382bb3cbe07323026775ad51f5a4fb564505992ae4a670",
+        "revision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+      },
+      {
+        "path": "vocab.json",
+        "size": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "revision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+      }
+    ]
+  },
+  "sox": {
+    "url": "https://downloads.sourceforge.net/project/sox/sox/14.4.2/sox-14.4.2-win32.zip",
+    "directory": "tools/sox",
+    "executable": "tools/sox/sox-14.4.2/sox.exe",
+    "sha256": "8072cc147cf1a3b3713b8b97d6844bb9389e211ab9e1101e432193fad6ae6662",
+    "size": 2651143
+  },
+  "reuse": {
+    "model_directories": [],
+    "wheel_directories": [],
+    "sox_archives": []
+  },
+  "sample": {
+    "url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-TTS-Repo/clone.wav",
+    "path": "samples/official_reference.wav",
+    "sha256": "480f55f41c71c3d79c2a9acc48f0bfb3c5a46222e6e9ebf3e2888e93501a6b5c",
+    "size": 775738
+  },
+  "shortcut_name": "声音克隆_一键版",
+  "launch_after_setup": true,
+  "dependency_lock": {
+    "path": "requirements.lock",
+    "sha256": "b17a7d5346aef64e58ffb8dcc0ae08ae605b247acd5bab05b011a96260914059"
+  },
+  "app_version": "0.2.0"
+}
