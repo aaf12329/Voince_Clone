@@ -1,22 +1,35 @@
-name: source-checks
+name: Source checks
 on: [push, pull_request]
-permissions:
-  contents: read
 jobs:
-  source:
+  checks:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Standard-library deployment and packaging tests
-        run: python -m unittest discover -s tests -p test_deployment.py -v
-      - name: Check Python syntax
-        run: python -m compileall -q deploy.py src scripts tests
-      - name: Build clean source release
-        run: python scripts/package_release.py
-      - uses: actions/upload-artifact@v4
-        with:
-          name: Voice-Clone-source
-          path: releases/*.zip
+      - name: Parse Python and JSON sources
+        shell: python
+        run: |
+          import ast, json
+          from pathlib import Path
+          for folder in ('Qwen_Deployment', 'Voice_Training'):
+              for path in Path(folder).rglob('*.py'):
+                  ast.parse(path.read_text(encoding='utf-8-sig'), filename=str(path))
+              for path in Path(folder).rglob('*.json'):
+                  json.loads(path.read_text(encoding='utf-8-sig'))
+      - name: Parse PowerShell entries
+        shell: pwsh
+        run: |
+          Get-ChildItem Qwen_Deployment,Voice_Training -Recurse -Filter *.ps1 | ForEach-Object {
+            $tokens=$null; $errors=$null
+            [void][System.Management.Automation.Language.Parser]::ParseFile($_.FullName,[ref]$tokens,[ref]$errors)
+            if ($errors.Count) { throw ($errors | Out-String) }
+          }
+      - name: Test model download protocol without GPU or network
+        shell: pwsh
+        run: |
+          python -B -m unittest discover -s Qwen_Deployment/tests -p test_deployment.py -v
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          python -B -m unittest discover -s Voice_Training/tests -p test_deployment.py -v
+          exit $LASTEXITCODE

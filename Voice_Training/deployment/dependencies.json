@@ -1,0 +1,421 @@
+{
+  "schema_version": 1,
+  "project_kind": "voice_training",
+  "python": {
+    "version": "3.12.15",
+    "executable": "runtime/cpython-3.12.15-windows-x86_64-none/python.exe"
+  },
+  "venv": {
+    "directory": ".venv",
+    "python": ".venv/Scripts/python.exe"
+  },
+  "package_index": "https://pypi.org/simple",
+  "bootstrap": {
+    "executable": "tools/uv.exe",
+    "executable_sha256": "70742ae9bd9f64f984fd69126662cfda5c03558bcb40075b2263833e4075f744",
+    "archive": {
+      "path": "cache/downloads/uv-bootstrap.whl",
+      "url": "https://files.pythonhosted.org/packages/af/fd/816f4e8a76197312ec8037369e5b5c8a5ebde7aa118b6250259e031d3444/uv-0.12.23-py3-none-win_amd64.whl",
+      "sha256": "fb8a4117a5224d73abe2204a1e744ae34b544f1b9a0b761576851deaa7215c12",
+      "size": 18138726
+    }
+  },
+  "packages": [
+    {
+      "name": "accelerate",
+      "version": "1.12.0"
+    },
+    {
+      "name": "aiofiles",
+      "version": "24.1.0"
+    },
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0"
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1"
+    },
+    {
+      "name": "brotli",
+      "version": "1.2.0"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22"
+    },
+    {
+      "name": "cffi",
+      "version": "2.1.1"
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.2"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0"
+    },
+    {
+      "name": "cloudpickle",
+      "version": "3.1.2"
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6"
+    },
+    {
+      "name": "decorator",
+      "version": "5.3.1"
+    },
+    {
+      "name": "einops",
+      "version": "0.8.2"
+    },
+    {
+      "name": "fastapi",
+      "version": "0.143.0"
+    },
+    {
+      "name": "ffmpy",
+      "version": "1.0.0"
+    },
+    {
+      "name": "filelock",
+      "version": "4.0.12"
+    },
+    {
+      "name": "flatbuffers",
+      "version": "25.12.19"
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.9.0"
+    },
+    {
+      "name": "gradio",
+      "version": "5.49.1"
+    },
+    {
+      "name": "gradio-client",
+      "version": "1.13.3"
+    },
+    {
+      "name": "groovy",
+      "version": "0.1.2"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0"
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9"
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1"
+    },
+    {
+      "name": "huggingface-hub",
+      "version": "0.36.2"
+    },
+    {
+      "name": "idna",
+      "version": "3.20"
+    },
+    {
+      "name": "jinja2",
+      "version": "3.1.6"
+    },
+    {
+      "name": "joblib",
+      "version": "1.6.0"
+    },
+    {
+      "name": "lazy-loader",
+      "version": "0.6"
+    },
+    {
+      "name": "librosa",
+      "version": "1.0.0"
+    },
+    {
+      "name": "llvmlite",
+      "version": "0.50.0"
+    },
+    {
+      "name": "markdown-it-py",
+      "version": "4.2.0"
+    },
+    {
+      "name": "markupsafe",
+      "version": "3.0.4"
+    },
+    {
+      "name": "mdurl",
+      "version": "0.1.2"
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0"
+    },
+    {
+      "name": "msgpack",
+      "version": "1.2.3"
+    },
+    {
+      "name": "narwhals",
+      "version": "2.26.0"
+    },
+    {
+      "name": "networkx",
+      "version": "3.7"
+    },
+    {
+      "name": "numba",
+      "version": "0.68.0"
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.3"
+    },
+    {
+      "name": "onnxruntime",
+      "version": "1.31.0"
+    },
+    {
+      "name": "opentelemetry-api",
+      "version": "1.45.1"
+    },
+    {
+      "name": "orjson",
+      "version": "3.13.0"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3"
+    },
+    {
+      "name": "pandas",
+      "version": "2.3.3"
+    },
+    {
+      "name": "pillow",
+      "version": "11.3.0"
+    },
+    {
+      "name": "platformdirs",
+      "version": "4.12.4"
+    },
+    {
+      "name": "pooch",
+      "version": "1.9.0"
+    },
+    {
+      "name": "protobuf",
+      "version": "7.36.2"
+    },
+    {
+      "name": "psutil",
+      "version": "7.2.2"
+    },
+    {
+      "name": "pycparser",
+      "version": "3.1"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.11.10"
+    },
+    {
+      "name": "pydantic-core",
+      "version": "2.33.2"
+    },
+    {
+      "name": "pydub",
+      "version": "0.25.1"
+    },
+    {
+      "name": "pygments",
+      "version": "2.21.0"
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0"
+    },
+    {
+      "name": "python-multipart",
+      "version": "0.0.32"
+    },
+    {
+      "name": "pytz",
+      "version": "2026.5"
+    },
+    {
+      "name": "pyyaml",
+      "version": "6.0.3"
+    },
+    {
+      "name": "qwen-tts",
+      "version": "0.1.1"
+    },
+    {
+      "name": "regex",
+      "version": "2026.9.29"
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2"
+    },
+    {
+      "name": "rich",
+      "version": "15.0.0"
+    },
+    {
+      "name": "ruff",
+      "version": "0.17.0"
+    },
+    {
+      "name": "safehttpx",
+      "version": "0.1.7"
+    },
+    {
+      "name": "safetensors",
+      "version": "0.8.0"
+    },
+    {
+      "name": "scikit-learn",
+      "version": "1.9.1"
+    },
+    {
+      "name": "scipy",
+      "version": "1.18.1"
+    },
+    {
+      "name": "semantic-version",
+      "version": "2.10.0"
+    },
+    {
+      "name": "setuptools",
+      "version": "84.0.0"
+    },
+    {
+      "name": "shellingham",
+      "version": "1.5.4"
+    },
+    {
+      "name": "six",
+      "version": "1.17.0"
+    },
+    {
+      "name": "soundfile",
+      "version": "0.14.0"
+    },
+    {
+      "name": "sox",
+      "version": "1.5.0"
+    },
+    {
+      "name": "soxr",
+      "version": "1.1.0"
+    },
+    {
+      "name": "starlette",
+      "version": "0.52.1"
+    },
+    {
+      "name": "sympy",
+      "version": "1.14.0"
+    },
+    {
+      "name": "threadpoolctl",
+      "version": "3.7.0"
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.22.2"
+    },
+    {
+      "name": "tomlkit",
+      "version": "0.13.3"
+    },
+    {
+      "name": "torch",
+      "version": "2.9.1+cu128"
+    },
+    {
+      "name": "torchaudio",
+      "version": "2.9.1+cu128"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.70.1"
+    },
+    {
+      "name": "transformers",
+      "version": "4.57.3"
+    },
+    {
+      "name": "typer",
+      "version": "0.27.3"
+    },
+    {
+      "name": "typing-extensions",
+      "version": "4.16.0"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4"
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.5"
+    },
+    {
+      "name": "urllib3",
+      "version": "2.8.0"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.54.0"
+    },
+    {
+      "name": "websockets",
+      "version": "15.0.1"
+    }
+  ],
+  "gpu_wheels": [
+    {
+      "package": "torch",
+      "version": "2.9.1+cu128",
+      "path": "cache/downloads/torch-2.9.1+cu128-cp312-cp312-win_amd64.whl",
+      "url": "https://download-r2.pytorch.org/whl/cu128/torch-2.9.1%2Bcu128-cp312-cp312-win_amd64.whl",
+      "sha256": "3a01f0b64c10a82d444d9fd06b3e8c567b1158b76b2764b8f51bfd8f535064b0",
+      "size": 2862033275
+    },
+    {
+      "package": "torchaudio",
+      "version": "2.9.1+cu128",
+      "path": "cache/downloads/torchaudio-2.9.1+cu128-cp312-cp312-win_amd64.whl",
+      "url": "https://download-r2.pytorch.org/whl/cu128/torchaudio-2.9.1%2Bcu128-cp312-cp312-win_amd64.whl",
+      "sha256": "88896c7bfa486102439fab6c85ac834176617e9c06eb0be9074c07ee1183b47d",
+      "size": 2216960
+    }
+  ],
+  "sox": {
+    "executable": "tools/sox/sox-14.4.2/sox.exe",
+    "executable_sha256": "e0e3cdc4bcdfbb5b91ac8f53b024964d092f89ba90130ba74b223a1df11b5439",
+    "archive": {
+      "path": "cache/downloads/sox-14.4.2-win32.zip",
+      "url": "https://downloads.sourceforge.net/project/sox/sox/14.4.2/sox-14.4.2-win32.zip",
+      "sha256": "8072cc147cf1a3b3713b8b97d6844bb9389e211ab9e1101e432193fad6ae6662",
+      "size": 2651143
+    }
+  }
+}

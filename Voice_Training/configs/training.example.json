@@ -1,0 +1,27 @@
+{
+  "student_model_id": "Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+  "teacher_model_id": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+  "profiles": "data/characters/example_character/profiles.json",
+  "prepared_directory": "data/prepared/example_character",
+  "teacher_cache": "cache/teacher/example_character",
+  "checkpoint_directory": "checkpoints/example_character",
+  "export_directory": "models/characters/example_character",
+  "validation_ids": [
+    "validation_001"
+  ],
+  "reference_id": "train_001",
+  "seed": 42,
+  "epochs": 1,
+  "gradient_accumulation": 2,
+  "learning_rate": 5e-05,
+  "lora_rank": 8,
+  "lora_alpha": 16,
+  "temperature": 2.0,
+  "kd_weight": 0.35,
+  "subcode_weight": 0.3,
+  "subcode_chunk_frames": 32,
+  "checkpoint_every_steps": 4,
+  "max_audio_seconds": 30,
+  "speaker_name": "example_character",
+  "language": "Chinese"
+}
